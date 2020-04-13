@@ -1,4 +1,3 @@
 # Prac_Parallax
 
-WebStoryboy 
-https://youtu.be/5Dwq-T3akzg
+WebStoryboy https://www.youtube.com/playlist?list=PL4UVBBIc6giI5DyNcvxlV2myMJsEiynse
