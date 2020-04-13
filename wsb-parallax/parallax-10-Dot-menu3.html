@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Parallax08</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+
+    <title>Parallax10</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i'" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <style>
@@ -20,10 +20,43 @@
 
         /* dot */
         #dot {position: fixed; right: 20px; top: 50%; transform: translateY(-50%);}
-        #dot li a {color: #fff; width: 20px; height: 20px; background: rgba(255,255,255,0.5);
-            display: block; margin: 8px; border-radius: 50%;}
-        #dot li a em{display: none;}
-        #dot li .active a{ background: rgba(255,255,255,1);}
+        #dot li {
+            position: relative;
+            width: 20px; height: 20px;
+            margin: 15px 12px;
+        }
+        #dot li a {
+            position: absolute; top: 0; left: 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 100%; height: 100%;
+            display: block;
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+        #dot li a:after {
+            content: '';
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 1px #fff;
+            transform: scale(3);
+            opacity: 0;
+            visibility: visible;
+            transition: 
+                opacity 0.3s ease,
+                transform 0.3s ease,
+                visibility 0s 0.3s;
+        }
+        #dot li.active {}
+        #dot li.active a {}
+        #dot li.active a:after {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        #dot li a em {display: none;}
 
         /* contents */
         #contents {text-align: center; color: #fff;}
@@ -32,13 +65,12 @@
         #contents > div h2 strong {font-weight: 700; font-style: italic;}
 
         /* section */
-        #section1 {background:radial-gradient(ellipse farthest-corner at center top, #A3A1FF, #3A3897);}
+        #section3 {background:radial-gradient(ellipse farthest-corner at center top, #A3A1FF, #3A3897);}
         #section2 {background:radial-gradient(ellipse farthest-corner at center bottom, #3AA17E, #00537E);}
-        #section3 {background:radial-gradient(ellipse farthest-corner at center top, #29ABE2, #4F00BC);}
-        #section4 {background:radial-gradient(ellipse farthest-corner at center top, #FF5300, #45145A);}
+        #section4 {background:radial-gradient(ellipse farthest-corner at center top, #29ABE2, #4F00BC);}
+        #section1 {background:radial-gradient(ellipse farthest-corner at center top, #FF5300, #45145A);}
         #section5 {background:radial-gradient(ellipse farthest-corner at center bottom, #852D91, #312A6C);}
         #section6 {background:radial-gradient(ellipse farthest-corner at center top, #FBB03B, #D4145A);}
-
     </style>
 </head>
 <body>
@@ -63,12 +95,12 @@
     </div>
 
     <div id="contents">
-        <div id="section1"><h2>언어의 한계가 곧 <strong>자기 세계의 한계다.</strong></h2></div>
-        <div id="section2"><h2><strong>교육은</strong> 최상의 노후 대비책이다.</h2></div>
-        <div id="section3"><h2>계획 없는 목표는 한낱 <strong>꿈에 불과하다.</strong></h2></div>
-        <div id="section4"><h2>용기란 공포를 1분 더 <strong>참는 것이다.</strong></h2></div>
-        <div id="section5"><h2><strong>욕망을</strong> 이성의 지배 하에 두어라.</h2></div>
-        <div id="section6"><h2>교육의 위대한 목표는 앎이 아니라 <strong>행동이다.</strong></h2></div>
+        <div id="section1"><h2>인생은 짧은 담요와 같다.</h2></div>
+        <div id="section2"><h2>끓어 당기면 발끝이 춥고</h2></div>
+        <div id="section3"><h2>밑으로 내리면 어깨가 싸늘하다.</h2></div>
+        <div id="section4"><h2>그러나 긍정적인 사람은</h2></div>
+        <div id="section5"><h2>무릎을 구부려 쾌적한 밤을 보낸다.</h2></div>
+        <div id="section6"><h2>-엠 하워드 -</h2></div>
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
